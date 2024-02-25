@@ -18,10 +18,10 @@
 void delay (uint32_t us);                                      //this function is used to obtain x us (microseconds)
 void Set_Pin_Output (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);  //used to set GPIO pin as output
 void Set_Pin_Input (GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);   //used to set GPIO pin as input
-uint8_t DS18B20_Start (void);
-void DS18B20_Write (uint8_t data);
-uint8_t DS18B20_Read (void);
-float DS18B20_Get_Temperature(void);
+uint8_t DS18B20_Start (void);                                  //init the sensor
+void DS18B20_Write (uint8_t data);                             //write a byte of data to sensor
+uint8_t DS18B20_Read (void);                                   //read a byte of data from sensor
+float DS18B20_Get_Temperature(void);                           //used to obtain temperature from sensor. use just this function in main file.
 
 
 #endif /* INC_DS18B20_H_ */
